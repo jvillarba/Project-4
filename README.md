@@ -31,13 +31,13 @@ Collector | TBD | I want to see how much my collection is worth ** possible?
 
 ---
 #### Credits:
-![Image](https://upload.wikimedia.org/wikipedia/commons/0/04/MarvelLogo.svg) Marvel API
+![Image](https://yt3.ggpht.com/-058HlQo6Dfc/AAAAAAAAAAI/AAAAAAAAAAA/h3mTqyvMa8E/s100-c-k-no/photo.jpg) Marvel API
 
 Comic Book Price Guide API [Five (5) books free per month without subscription]
 
-![Image](https://upload.wikimedia.org/wikipedia/commons/7/7c/Facebook_New_Logo_%282015%29.svg) Facebook OAuth
+![Image](http://demo-oauth.nemiro.net/Icon/Facebook) Facebook OAuth
 
-![Image](https://upload.wikimedia.org/wikipedia/en/3/3e/Trello_Logo.png) Trello [link](https://trello.com/b/uUDOudLU)
+![Image](http://heartofwisdom.com/blog/wp-content/uploads/2013/07/trello-icon-s.png) Trello [link](https://trello.com/b/uUDOudLU)
 
 
 ---
