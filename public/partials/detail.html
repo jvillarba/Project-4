@@ -1,3 +1,12 @@
-<h1>This is the Show View</h1>
+<div ng-if="!detail.editing">
+    <h1>{{ detail.user.name }}</h1>
+    <h2>{{ detail.user.email }}</h2>
+    <button ng-click="detail.edit()">Edit</button>
+</div>
 
-{{ main.currentUser.name }}
+<form ng-if="detail.editing" ng-submit="detail.update()">
+    <input ng-model="detail.editingUser.name" type="text" placeholder="Name">
+    <input ng-model="detail.editingUser.email" type="text" placeholder="Email">
+    <button type="submit">Edit</button>
+    <button ng-click="detail.editing=false">Cancel</button>
+</form>
