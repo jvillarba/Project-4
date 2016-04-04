@@ -1,8 +1,6 @@
 (function(){
-  angular.module('marvelApp',['ui.router'])
-    .config(['$stateProvider', '$urlRouterProvider', mainRouter])
-
-  function mainRouter($stateProvider, $urlRouterProvider){
+  angular.module('marvelApp', ['ui.router'])
+    .config(function($stateProvider, $urlRouterProvider){
 
     // default route to prevent 404 errors
     $urlRouterProvider.otherwise('/')
@@ -38,5 +36,5 @@
       //   templateUrl: 'partials/detail.html',
       //   controller: 'ComicDetailController as detail'
       // })
-  }
+  })
 })()
