@@ -5,9 +5,10 @@ var
 var userSchema = new Schema ({
     name: String,
     email: String,
-    password: String
+    password: String,
+    admin: Boolean
 })
 
 var User = mongoose.model('User', userSchema)
 
-module.exports =  User
+module.exports = User
