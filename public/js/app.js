@@ -1,6 +1,8 @@
 (function(){
   angular.module('marvelApp', ['ui.router'])
-    .config(function($stateProvider, $urlRouterProvider){
+    .config(function($stateProvider, $urlRouterProvider, mainRouter)
+    
+    function mainRouter($stateProvider, $urlRouterProvider){
 
     // default route to prevent 404 errors
     $urlRouterProvider.otherwise('/')
