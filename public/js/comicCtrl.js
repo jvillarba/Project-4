@@ -14,7 +14,7 @@
       console.log(results.data.results)
     })
 
-    console.log("Comics Controller is being used")
+    console.log("Comic Controller is being used")
   }
 })()
 

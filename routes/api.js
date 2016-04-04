@@ -5,6 +5,11 @@ var
     
 apiRouter.route('/users')
     .get(apiCtrl.index)
+    .post(apiCtrl.create)
     
+apiRouter.route('/users/:id')
+    .get(apiCtrl.show)
+    .patch(apiCtrl.update)
+    .delete(apiCtrl.delete)
     
 module.exports = apiRouter

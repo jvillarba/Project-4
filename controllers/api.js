@@ -25,5 +25,21 @@ module.exports = {
             if(err) return console.log(err)
             res.json(user)
         })
+    },
+    
+    // update a user
+    update: function(req,res){
+        User.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, function(err, user){
+            if(err) return console.log(err)
+            res.json({success: true, message: "user updated", user: user})
+        })
+    },
+    
+    // delete a user
+    delete: function(req,res){
+        User.findOneAndRemove({_id: req.params.id}, function(err){
+            if(err) return console.log(err)
+            res.json({success: true, message: "user deleted"})
+        })
     }
 }

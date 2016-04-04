@@ -23,11 +23,11 @@
           templateUrl: 'partials/new.html',
           controller: 'MainController as main'
       })
-    //   .state('detail', {
-    //       url: '/users/:id',
-    //       templateUrl: 'partials/detail.html',
-    //       controller: 'DetailController as detail'
-    //   })
+      .state('detail', {
+          url: '/users/:id',
+          templateUrl: 'partials/detail.html',
+          controller: 'DetailController as detail'
+      })
       .state('comics', {
         url: '/comics',
         templateUrl: 'partials/series.html',

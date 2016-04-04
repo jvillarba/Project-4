@@ -1,10 +1,10 @@
 (function(){
   angular.module('marvelApp')
-    .factory('comicsService', comicsService)
+    .factory('comicService', comicService)
 
-  comicsService.$inject = ['$http']
+  comicService.$inject = ['$http']
 
-  function comicsService($http) {
+  function comicService($http) {
     var service = {
       index: index,
       show: show
