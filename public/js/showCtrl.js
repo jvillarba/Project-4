@@ -2,14 +2,14 @@
 //   angular.module('marvelApp')
 //     .controller('ShowController', ShowController)
 //
-//   ShowController.$inject = ['comicsService', '$stateParams']
+//   ShowController.$inject = ['comicService', '$stateParams']
 //
-//   function ShowController(comicsService, $stateParams) {
+//   function ShowController(comicService, $stateParams) {
 //     var vm = this
 //
 //     vm.title = "The Show Detail Controller"
 //
-//     comicsService.show($stateParams.id).success(function(results) {
+//     comicService.show($stateParams.id).success(function(results) {
 //       console.log(results)
 //       vm.comic = results
 //     })

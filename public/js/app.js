@@ -10,13 +10,28 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'partials/home.html',
-        controller: 'MainController as main'
+        templateUrl: 'partials/home.html'
+        // controller: 'MainController as main'
       })
+      .state('users', {
+          url: '/users',
+          templateUrl: 'partials/users.html',
+          controller: 'MainController as main'
+      })
+      .state('newUser', {
+          url: '/users/new',
+          templateUrl: 'partials/new.html',
+          controller: 'MainController as main'
+      })
+    //   .state('detail', {
+    //       url: '/users/:id',
+    //       templateUrl: 'partials/detail.html',
+    //       controller: 'DetailController as detail'
+    //   })
       .state('comics', {
         url: '/comics',
         templateUrl: 'partials/series.html',
-        controller: 'ComicsController as comics'
+        controller: 'ComicController as comics'
       })
       // .state('detail', {
       //   url: '/comics/:id',
