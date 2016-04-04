@@ -13,9 +13,9 @@
     <script src="js/mainCtrl.js"></script>
     <script src="js/userService.js"></script>
 
-    <script src="js/comicsService.js"></script>
+    <script src="js/comicService.js"></script>
     <script src="js/mainCtrl.js"></script>
-    <script src="js/comicsCtrl.js"></script>
+    <script src="js/comicCtrl.js"></script>
     <script src="js/showCtrl.js"></script>
 
      <!--Latest compiled and minified CSS -->
@@ -24,21 +24,19 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>My Marvel App</title>
+    <title>ComicBook App</title>
   </head>
   <body ng-app="marvelApp">
-    <nav>
+    <nav class="cyan accent-3">
         <div class="nav-wrapper">
-        <a ui-sref="/" class="brand-logo">My Comicbook App</a>
-        <a ui-sref="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a ui-sref="home" class="brand-logo">Comicbook Collection</a>
+        <a ui-sref="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a ui-sref="home">Home</a></li>
             <li><a ui-sref="comics">Comics</a></li>
             <li><a ui-sref="users">Users</a></li>
             <li><a ui-sref="newUser">Sign Up</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-            <li><a ui-sref="home">Home</a></li>
             <li><a ui-sref="comics">Comics</a></li>
             <li><a ui-sref="users">Users</a></li>
             <li><a ui-sref="newUser">Sign Up</a></li>
@@ -50,11 +48,11 @@
       <div ui-view></div>
     </div>
 
-    <footer class="page-footer" style="postion:absolute;bottom:0px;width:100%">
+    <footer ng-controller="ComicsController as comics" class="page-footer cyan accent-3">
         <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            
+            <a class="grey-text text-lighten-4 right" href="http://marvel.com">{{ comics.copyright }}</a>
             </div>
         </div>
     </footer>

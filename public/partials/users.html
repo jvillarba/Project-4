@@ -1,0 +1,8 @@
+<h1>Users list</h1>
+
+<div class="collection">
+    <div ng-repeat="user in main.users">
+        <a ui-sref="detail({id: user._id})" class="collection-item">{{ user.name }}</a>
+        <button ng-click="main.destroy(user._id, $index)">Delete</button>
+    </div>
+</div>
