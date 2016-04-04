@@ -18,6 +18,11 @@
                 templateUrl: 'partials/users.html',
                 controller: 'MainController as main'
             })
+            .state('login', {
+                url: '/users/login',
+                templateUrl: 'partials/login.html',
+                controller: 'MainController as main'
+            })
             .state('newUser', {
                 url: '/users/new',
                 templateUrl: 'partials/new.html',

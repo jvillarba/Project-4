@@ -28,6 +28,7 @@ app.get('/', function(req,res){
     res.sendFile(path.join(__dirname, 'public/index.html'))
 })
 
+// apply routes to application with the prefix /api
 app.use('/api', apiRoutes)
 
 app.listen(port, function(){

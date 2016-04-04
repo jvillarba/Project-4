@@ -1,0 +1,9 @@
+<h2 class="blue-text text-darken-2">Login</h2>
+    <form ng-controller="Main as main">
+        <input type="text" ng-model="main.name" placeholder="Name">
+        <input type="email" ng-model="main.email" placeholder="Email">
+        <input type="password" ng-model="main.password" placeholder="Password">
+        <button ng-click="main.login()">Login</button>
+        <button ng-click="main.logout()" ng-show="main.isAuthed()">Logout</button>
+        or <a ui-sref="newUser">Sign up</a>
+    </form>
