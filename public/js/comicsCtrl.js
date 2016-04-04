@@ -7,7 +7,7 @@
   function ComicsController(comicsService){
     var vm = this
 
-    vm.title = "Data provided by Marvel. © 2016 MARVEL"
+    vm.copyright = "Data provided by Marvel. © 2016 MARVEL"
 
     comicsService.index().success(function(results) {
       vm.allComics = results.data.results
