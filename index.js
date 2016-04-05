@@ -11,11 +11,11 @@ var
     User       = require('./models/User') // get mongoose model
 
 var port = process.env.PORT || 8080 // use to create
-mongoose.connect(config.database) // connect to dB
-// mongoose.connect(config.database, function(err){
-//     if(err) return console.log('Error connecting')
-//     console.log('Connected to ' + config.database)
-// }) // connect to dB
+// mongoose.connect(config.database) // connect to dB
+mongoose.connect(config.database, function(err){
+    if(err) return console.log('Error connecting')
+    console.log('Connected to ' + config.database)
+}) // connect to dB
 app.set('superSecret', config.secret) // secret variable
 
 app.use(bodyParser.urlencoded({extended: false}))
