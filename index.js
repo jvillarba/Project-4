@@ -1,7 +1,9 @@
 var 
     express    = require('express'),
     app        = express(),
+    // angularMaterialize = require('angular-materialize'),
     logger     = require('morgan'),
+    // materialize = require('materialize-css'),
     mongoose   = require('mongoose'),
     path       = require('path'),
     bodyParser = require('body-parser'),
@@ -10,11 +12,16 @@ var
     config     = require('./config'), // get config file
     User       = require('./models/User') // get mongoose model
 
-var port = process.env.PORT || 8080 // use to create
+// environment port
+var port = process.env.PORT || 8080 
+
+// connect to MLAB (mongodB)
+var DB_URL = process.env.MLAB_LINK || 'mongodb://localhost/marvel-app'
+
 // mongoose.connect(config.database) // connect to dB
-mongoose.connect(config.database, function(err){
+mongoose.connect(DB_URL, function(err){
     if(err) return console.log('Error connecting')
-    console.log('Connected to ' + config.database)
+    console.log('Connected to ' + DB_URL)
 }) // connect to dB
 app.set('superSecret', config.secret) // secret variable
 
