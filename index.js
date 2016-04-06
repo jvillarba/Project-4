@@ -1,7 +1,6 @@
 var 
     express    = require('express'),
     app        = express(),
-    // angularMaterialize = require('angular-materialize'),
     logger     = require('morgan'),
     // materialize = require('materialize-css'),
     mongoose   = require('mongoose'),
