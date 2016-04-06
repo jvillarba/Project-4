@@ -1,6 +1,6 @@
 var
     User = require('../models/User.js')
-    // jwt = require('jsonwebtoken')
+    jwt = require('jsonwebtoken')
     
 module.exports = {
     
@@ -14,7 +14,9 @@ module.exports = {
     
     // create new user
     create: function(req,res){
-        User.create(req.body, function(err, user){
+        var newUser = new User(req.body)
+        newUser.password = newUser.generateHash(req.body.password)
+        newUser.save(function(err, user){
             if(err) return console.log(err)
             res.json({success: true, message: "user created", user: user})
         })
@@ -42,5 +44,38 @@ module.exports = {
             if(err) return console.log(err)
             res.json({success: true, message: "user deleted"})
         })
-    }
+    },
+    
+    // authenticate user
+	authenticate: function(req,res){
+		User.findOne({email: req.body.email}, function(err, user){
+			if(err) return console.log(err)
+			if(!user) return res.json({success: false, message: "No User Found."})
+			if(user && !user.validPassword(req.body.password)) {
+				return res.json({success: false, message: "Wrong password!"})
+			}
+			var token = jwt.sign(user.toObject(), process.env.secret, {
+				expiresInMinutes: 1440
+			})
+			res.json({success: true, message: "Boom! Token!", token: token})
+		})
+	},
+
+	protect: function(req, res, next){
+		var token = req.body.token || req.query.token || req.headers['x-access-token']
+
+		if(token){
+			jwt.verify(token, process.env.secret, function(err, decoded){
+				if(err) return res.json({success: false, message: "Failed to verify token."})
+				req.decoded = decoded
+				console.log(decoded)
+				next()
+			})
+		} else{
+			return res.status(403).json({
+				success: false,
+				message: "No token provided."
+			})
+		}
+	}    
 }

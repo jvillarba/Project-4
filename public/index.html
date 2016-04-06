@@ -11,10 +11,8 @@
 
     <!-- Application -->
     <script src="js/app.js"></script>
-    <script src="js/mainCtrl.js"></script>
+    <script src="js/globalCtrl.js"></script>
     <script src="js/userService.js"></script>
-    <script src="js/authService.js"></script>    
-
     <script src="js/comicService.js"></script>
     <script src="js/detailCtrl.js"></script>
     <script src="js/mainCtrl.js"></script>
@@ -29,7 +27,7 @@
 
     <title>ComicBook App</title>
   </head>
-  <body ng-app="marvelApp" background="../images/xmen3.jpg">
+  <body ng-app="marvelApp" ng-controller="GlobalController as global">
     <script src="js/jquery-2.2.2.js"></script>
 
     <!-- Compiled and minified JavaScript -->
@@ -37,19 +35,20 @@
     <nav class="cyan accent-3">
         <div class="nav-wrapper">
         <a ui-sref="home" class="brand-logo">Comicbook Collection</a>
-        <a href="#!" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <!--<a href="#!" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>-->
         <ul class="right hide-on-med-and-down">
             <li><a ui-sref="comics">Comics</a></li>
             <li><a ui-sref="users">Users</a></li>
             <li><a ui-sref="newUser">Sign Up</a></li>
-            <li><a ui-sref="login">Login</a></li>
+            <li ng-if="!global.isAuth()"><a ui-sref="login">Log In</a></li>
+            <li ng-if="global.isAuth()"><a ng-click="global.logout()">Log Out</a></li>
         </ul>
-        <ul class="side-nav" id="mobile-demo">
+        <!--<ul class="side-nav" id="mobile-demo">
             <li><a ui-sref="comics">Comics</a></li>
             <li><a ui-sref="users">Users</a></li>
             <li><a ui-sref="newUser">Sign Up</a></li>
             <li><a ui-sref="login">Login</a></li>
-        </ul>
+        </ul>-->
         </div>
     </nav>
 
