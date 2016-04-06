@@ -18,11 +18,6 @@
                 templateUrl: 'partials/users.html',
                 controller: 'MainController as main'
             })
-            .state('login', {
-                url: '/users/login',
-                templateUrl: 'partials/login.html',
-                controller: 'MainController as main'
-            })
             .state('newUser', {
                 url: '/users/new',
                 templateUrl: 'partials/new.html',
@@ -33,15 +28,19 @@
                 templateUrl: 'partials/detail.html',
                 controller: 'DetailController as detail'
             })
+            .state('login', {
+                url: '/login',
+                templateUrl: 'partials/login.html'
+            })
             .state('comics', {
                 url: '/comics',
                 templateUrl: 'partials/series.html',
                 controller: 'ComicController as comics'
             })
-            // .state('detail', {
-            //   url: '/comics/:id',
-            //   templateUrl: 'partials/detail.html',
-            //   controller: 'ComicDetailController as detail'
-            // })
+            .state('comicpage', {
+              url: '/comics/:id',
+              templateUrl: 'partials/comic.html',
+              controller: 'ComicDetailController as detail'
+            })
     }
 })()

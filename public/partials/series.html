@@ -33,18 +33,16 @@
   </ul>
 <ul class="collection">
     <li class="collection-item avatar collapsible-header blue-grey darken-1 white-text" ng-repeat="comic in comics.allComics">
-        {{comic.comics.thumbnail.path}}
-        {{comic.comics.thumbnail.extension}}
-        <!--<img src="{{ comic.comics.thumbnail.path}} + '.' + {{ comic.comics.thumbnail.extension }}" alt="" class="circle">-->
-        <p> Title: <strong> {{ comic.title }} </strong> | ID: <strong> {{ comic.id }} </strong> </p>
-        <p> Available issues: {{ comic.comics.available }} </p>
+        <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="" class="circle">
+        <h5> <span class="cyan-text text-lighten-3"> {{ comic.title }} </span> </h5>
+        <p> ID: <span> {{ comic.id }} </span> | Available issues: <span> {{ comic.comics.available }} </span> </p>
     </li>
 </ul>
 
-<script>
+<!--<script>
   $(document).ready(function(){
     $('.collapsible').collapsible({
       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
   });
-</script>
+</script>-->

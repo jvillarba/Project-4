@@ -1,15 +1,13 @@
 var 
     express    = require('express'),
     app        = express(),
-    // angularMaterialize = require('angular-materialize'),
     logger     = require('morgan'),
-    // materialize = require('materialize-css'),
     mongoose   = require('mongoose'),
     path       = require('path'),
     bodyParser = require('body-parser'),
     apiRoutes  = require('./routes/api.js'),
+    dotenv     = require('dotenv').load({silent: true}),
     jwt        = require('jsonwebtoken'), // used to create, sign, and verify tokens
-    config     = require('./config'), // get config file
     User       = require('./models/User') // get mongoose model
 
 // environment port
@@ -23,7 +21,7 @@ mongoose.connect(DB_URL, function(err){
     if(err) return console.log('Error connecting')
     console.log('Connected to ' + DB_URL)
 }) // connect to dB
-app.set('superSecret', config.secret) // secret variable
+app.set('superSecret', process.env.secret) // secret variable
 
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
