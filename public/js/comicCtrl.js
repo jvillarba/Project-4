@@ -2,9 +2,9 @@
   angular.module('marvelApp')
     .controller('ComicController', ComicController)
 
-  ComicController.$inject = ['comicService']
+  ComicController.$inject = ['comicService', '$state', '$stateParams']
 
-  function ComicController(comicService){
+  function ComicController(comicService, $state, $stateParams){
     var vm = this
 
     vm.copyright = "Data provided by Marvel. © 2016 MARVEL"

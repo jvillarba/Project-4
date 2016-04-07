@@ -1,7 +1,7 @@
 <h2 class="cyan-text text-lighten-1">Marvel Comics list</h2>
 
 <ul class="collection">
-    <li ui-sref="comicpage({id: comic._id})" class="collection-item avatar collapsible-header blue-grey darken-1 white-text thin" ng-repeat="comic in comics.allComics">
+    <li ui-sref="comicpage({id: comic.id})" class="collection-item avatar collapsible-header blue-grey darken-1 white-text thin" ng-repeat="comic in comics.allComics">
         <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="" class="circle">
         <h5> <span> {{ comic.title }} </span> </h5>
         <!--<p> ID: <span> {{ comic.id }} </span> | Available issues: <span> {{ comic.comics.available }} </span> </p>-->

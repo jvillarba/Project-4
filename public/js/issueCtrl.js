@@ -2,7 +2,7 @@
   angular.module('marvelApp')
     .controller('IssueController', IssueController)
 
-  IssueController.$inject = ['comicService', '$stateParams']
+  IssueController.$inject = ['comicService','$stateParams']
 
   function IssueController(comicService, $stateParams) {
     var vm = this
