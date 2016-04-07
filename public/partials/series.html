@@ -1,7 +1,15 @@
 <h2 class="cyan-text text-lighten-1">Marvel Comics list</h2>
 
-<ul class="pagination">
-    <!--<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>-->
+<ul class="collection">
+    <li class="collection-item avatar collapsible-header blue-grey darken-1 white-text thin" ng-repeat="comic in comics.allComics">
+        <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="" class="circle">
+        <h5> <span> {{ comic.title }} </span> </h5>
+        <!--<p> ID: <span> {{ comic.id }} </span> | Available issues: <span> {{ comic.comics.available }} </span> </p>-->
+    </li>
+</ul>
+
+<!--<ul class="pagination">
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
     <li class="active"><a href="#!">0</a></li>
     <li class="waves-effect"><a ui-sref="comics">A</a></li>
     <li class="waves-effect"><a href="#!">B</a></li>
@@ -29,17 +37,9 @@
     <li class="waves-effect"><a href="#!">X</a></li>
     <li class="waves-effect"><a href="#!">Y</a></li>
     <li class="waves-effect"><a href="#!">Z</a></li>
-    <!--<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>-->
+    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
   </ul>
-<ul class="collection">
-    <li class="collection-item avatar collapsible-header blue-grey darken-1 white-text" ng-repeat="comic in comics.allComics">
-        <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="" class="circle">
-        <h5> <span class="cyan-text text-lighten-3"> {{ comic.title }} </span> </h5>
-        <p> ID: <span> {{ comic.id }} </span> | Available issues: <span> {{ comic.comics.available }} </span> </p>
-    </li>
-</ul>
-
-<!--<script>
+<script>
   $(document).ready(function(){
     $('.collapsible').collapsible({
       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
