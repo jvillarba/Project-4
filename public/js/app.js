@@ -1,7 +1,7 @@
 (function(){
   angular.module('marvelApp', ['ui.router'])
     .config(['$stateProvider', '$urlRouterProvider', mainRouter])
-    
+
     function mainRouter($stateProvider, $urlRouterProvider){
 
         // default route to prevent 404 errors
@@ -39,8 +39,8 @@
             })
             .state('comicpage', {
               url: '/comics/:id',
-              templateUrl: 'partials/comic.html',
-              controller: 'ShowController as show'
+              templateUrl: 'partials/issue.html',
+              controller: 'IssueController as issue'
             })
     }
 })()
