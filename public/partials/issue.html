@@ -1,5 +1,21 @@
-<h2 class="cyan-text text-lighten-1">{{ issues.title}} </h2>
+<!-- <h2 class="cyan-text text-lighten-1"></h2> -->
+{{issues.oneComic.images}}
 
-<div ng-controller="IssueController as issues">
-    DESCRIPTION: {{ issues.oneComic.description }} Lorem ipsum dolor sit amet, nibh sodales, turpis sit posuere ipsum placerat, maecenas erat diam, praesent justo et lorem, dolores iaculis penatibus. Adipiscing wisi ipsum tristique porttitor fusce, augue mattis, duis at molestie tempus orci nec porttitor. Sollicitudin quam aliquam lorem, nibh senectus commodo felis ut tincidunt.
+<div class="row">
+  <div class="col s8 push-s4"><span class="flow-text"></span>
+    <ul class="collection">
+      <li ng-repeat="issue in issues.oneComic">
+        <h5> {{ issue.title }} </h5>
+        <p> <strong> PRICE: $</strong> {{ issue.prices[0].price }} | <strong> DATE: </strong> {{ issue.dates[1].date }} </p>
+        <p> <strong> DESCRIPTION: </strong> {{ issue.description }} </p>
+
+      </li>
+    </ul>
+  </div>
+  <div class="col s4 pull-s8">
+    <span>
+      <!-- <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="" class="circle"> -->
+      <img src="{{issues.oneComic.images[0].path}}.jpg" alt="">
+    </span>
+  </div>
 </div>

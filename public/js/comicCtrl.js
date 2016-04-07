@@ -13,7 +13,7 @@
       vm.allComics = results.data.results
       console.log(results.data.results)
     })
-    
+
     console.log("Comic Controller is being used")
   }
 })()
