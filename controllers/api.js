@@ -1,9 +1,9 @@
 var
     User = require('../models/User.js')
     jwt = require('jsonwebtoken')
-    
+
 module.exports = {
-    
+
     // list all users
     index: function(req,res){
         User.find({}, function(err, users){
@@ -11,7 +11,7 @@ module.exports = {
             res.json(users)
         })
     },
-    
+
     // create new user
     create: function(req,res){
         var newUser = new User(req.body)
@@ -21,7 +21,7 @@ module.exports = {
             res.json({success: true, message: "user created", user: user})
         })
     },
-    
+
     // show specific user
     show: function(req,res){
         User.findOne({_id: req.params.id}, 'email name', function(err, user){
@@ -29,7 +29,7 @@ module.exports = {
             res.json(user)
         })
     },
-    
+
     // update a user
     update: function(req,res){
         User.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, function(err, user){
@@ -37,7 +37,7 @@ module.exports = {
             res.json({success: true, message: "user updated", user: user})
         })
     },
-    
+
     // delete a user
     delete: function(req,res){
         User.findOneAndRemove({_id: req.params.id}, function(err){
@@ -45,7 +45,7 @@ module.exports = {
             res.json({success: true, message: "user deleted"})
         })
     },
-    
+
     // authenticate user
 	authenticate: function(req,res){
 		User.findOne({email: req.body.email}, function(err, user){
@@ -55,7 +55,7 @@ module.exports = {
 				return res.json({success: false, message: "Wrong password!"})
 			}
 			var token = jwt.sign(user.toObject(), process.env.secret, {
-				expiresInMinutes: 1440
+				expiresIn: 6000
 			})
 			res.json({success: true, message: "Boom! Token!", token: token})
 		})
@@ -77,5 +77,5 @@ module.exports = {
 				message: "No token provided."
 			})
 		}
-	}    
+	}
 }

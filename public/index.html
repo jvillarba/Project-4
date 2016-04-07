@@ -39,9 +39,9 @@
         <ul class="right hide-on-med-and-down">
             <li><a ui-sref="comics">Comic List</a></li>
             <li ng-hide="!global.isAuthed()"><a ui-sref="users">Users</a></li>
-            <li ng-hide="global.isAuthed()"><a ui-sref="newUser">Sign Up</a></li>
             <li ng-hide="!global.isAuthed()"><a ng-click="global.logout()">Log Out</a></li>
             <li ng-hide="global.isAuthed()"><a ui-sref="login">Log In</a></li>
+            <li ng-hide="global.isAuthed()"><a ui-sref="newUser">Sign Up</a></li>
         </ul>
         <!--<ul class="side-nav" id="mobile-demo">
             <li><a ui-sref="comics">Comics</a></li>
