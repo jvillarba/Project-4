@@ -58,7 +58,7 @@
         return {
             // automatically attach Authorization header
             request: function(config) {
-                // only put access token header to our API
+                // only puts "access token" header to our API
                 if(config.url.startsWith('/api/')) {
                     var token = auth.getToken();
                     console.log(config.url.indexOf(API))
