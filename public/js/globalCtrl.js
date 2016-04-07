@@ -18,7 +18,7 @@
         vm.loginUser = {}
 
         $rootScope.$on('$stateChangeStart', function(event, toState){
-            console.log(toState)
+            // console.log(toState)
             if(toState.name == "users" && !vm.isAuthed()){
                 event.preventDefault()
                 $state.go('login')
@@ -61,7 +61,7 @@
                 // only puts "access token" header to our API
                 if(config.url.startsWith('/api/')) {
                     var token = auth.getToken();
-                    console.log(config.url.indexOf(API))
+                    // console.log(config.url.indexOf(API))
                     if(token) {
                         config.headers['x-access-token'] = token;
                     }

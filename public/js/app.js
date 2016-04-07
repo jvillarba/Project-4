@@ -40,7 +40,7 @@
             .state('comicpage', {
               url: '/comics/:id',
               templateUrl: 'partials/comic.html',
-              controller: 'ComicDetailController as detail'
+              controller: 'ShowController as show'
             })
     }
 })()

@@ -7,13 +7,13 @@
   function ShowController(comicService, $stateParams) {
     var vm = this
 
-    vm.title = "The Show Detail Controller"
+    vm.title = "The Comic Page Detail Controller"
 
     comicService.show($stateParams.id).success(function(results) {
-      console.log(results)
-      vm.comic = results
+        console.log(results.data.results)
+        vm.allComics = results.data.results
     })
-
-    console.log("Show Detail Controller is being used")
+    
+    console.log("Comic Page Detail Controller is being used")
   }
 })()

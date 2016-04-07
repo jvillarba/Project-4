@@ -40,8 +40,8 @@
             <li><a ui-sref="comics">Comics</a></li>
             <li><a ui-sref="users">Users</a></li>
             <li><a ui-sref="newUser">Sign Up</a></li>
-            <li ng-show="global.isAuth()"><a ng-click="global.logout()">Log Out</a></li>
-            <li ng-show="!global.isAuth()"><a ui-sref="login">Log In</a></li>
+            <li><a ng-click="global.logout()">Log Out</a></li>
+            <li><a ui-sref="login">Log In</a></li>
         </ul>
         <!--<ul class="side-nav" id="mobile-demo">
             <li><a ui-sref="comics">Comics</a></li>
