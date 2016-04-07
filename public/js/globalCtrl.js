@@ -27,7 +27,10 @@
 
         function handleRequest(res) {
             var token = res.data ? res.data.token : null;
-            if(token) { console.log('JWT:', token); }
+            if(token) {
+                console.log('JWT:', token);
+                $state.go('comics')
+                }
             vm.message = res.data.message;
         }
 
@@ -55,11 +58,14 @@
         return {
             // automatically attach Authorization header
             request: function(config) {
-                var token = auth.getToken();
-                console.log(config.url.indexOf(API))
-                if(token) {
-                    config.headers['x-access-token'] = token;
-                }
+                // only put access token header to our API
+                if(config.url.startsWith('/api/')) {
+                    var token = auth.getToken();
+                    console.log(config.url.indexOf(API))
+                    if(token) {
+                        config.headers['x-access-token'] = token;
+                    }
+                }   
                 // console.log(config)
                 return config;
             },
