@@ -13,7 +13,7 @@
 
     function GlobalController(auth, user, $rootScope, $state){
         var vm = this
-        vm.title = "This Is The Global Controller!"
+        vm.title = "This Is the Global Controller!"
 
         vm.loginUser = {}
 
@@ -65,7 +65,7 @@
                     if(token) {
                         config.headers['x-access-token'] = token;
                     }
-                }   
+                }
                 // console.log(config)
                 return config;
             },

@@ -37,11 +37,11 @@
         <a ui-sref="home" class="brand-logo">Comicbook Collection</a>
         <!--<a href="#!" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>-->
         <ul class="right hide-on-med-and-down">
-            <li><a ui-sref="comics">Comics</a></li>
-            <li><a ui-sref="users">Users</a></li>
-            <li><a ui-sref="newUser">Sign Up</a></li>
-            <li><a ng-click="global.logout()">Log Out</a></li>
-            <li><a ui-sref="login">Log In</a></li>
+            <li><a ui-sref="comics">Comic List</a></li>
+            <li ng-hide="!global.isAuthed()"><a ui-sref="users">Users</a></li>
+            <li ng-hide="global.isAuthed()"><a ui-sref="newUser">Sign Up</a></li>
+            <li ng-hide="!global.isAuthed()"><a ng-click="global.logout()">Log Out</a></li>
+            <li ng-hide="global.isAuthed()"><a ui-sref="login">Log In</a></li>
         </ul>
         <!--<ul class="side-nav" id="mobile-demo">
             <li><a ui-sref="comics">Comics</a></li>
@@ -59,7 +59,6 @@
     <footer ng-controller="ComicController as comics" class="page-footer cyan accent-3" style="bottom:0px;width:100%">
         <div class="footer-copyright">
             <div class="container">
-
             <a class="grey-text text-lighten-4 right" href="http://marvel.com">{{ comics.copyright }}</a>
             </div>
         </div>
