@@ -13,14 +13,17 @@
 #### User Stores:
 User | Action | Comments
 --- | --- | ---
-Reader | POST | As a reader I want to to what Marvel comic books are available
-Collector | CRUD | I need to log in as a user in order to see my collection
-Collector | CRUD | I want to easily be able to see what comics I have versus what I don't have and use cover artwork when purchasing future comic books
-Collector | TBD | I want to see how much my collection is worth **future implementation**
+Reader | POST | As a reader, I want to to what Marvel comic books are available
+Developer | CRUD | As a programmer/designer, I want to be able to be able create, edit, and delete users
+Collector | CRUD | I want to easily be able to see avaialble comicbooks so I can find cover artwork to determine what to purchase
+Collector | CRUD | I need to log in as a user in order to see my collection *future implementation*
+Collector | TBD | I want to see how much my collection is worth *future implementation*
 
 #### Future Implementation:
 - Look into Comicbook Price Guide API
-- Mobile accessible (Ionic?)
+- Implement Haves / Wants model for Users
+- Implement Facebook OAuth
+- Mobile accessible (Ionic)
 
 ---
 #### Technologies:
@@ -40,4 +43,4 @@ Collector | TBD | I want to see how much my collection is worth **future impleme
 #### Frameworks:
 - Here is a quick preview of the application
 
-!{Image](Proj4wireframe.jpg)
+![Image](/Proj4wireframe.jpg)
