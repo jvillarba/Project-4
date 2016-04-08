@@ -1,8 +1,12 @@
-<h3 style="text-shadow: 2px 2px 4px #000000">Log In</h3>
-    <form ng-submit="global.login()">
-        <!--<input type="text" ng-model="main.name" placeholder="Name">-->
-        <input type="email" ng-model="global.loginUser.email" placeholder="Email">
-        <input type="password" ng-model="global.loginUser.password" placeholder="Password">
-        <button type="submit">Log In</button>
-        or <a ui-sref="newUser">Sign up</a>
-    </form>
+<div style="height: 60px"></div>
+  <div class="container blue-grey lighten-5" style="border: 3px solid #4dd0e1;width: 50%;padding:10px">
+    <h3 style="text-shadow: 2px 2px 4px #000000">Log In</h3>
+        <form ng-submit="global.login()">
+            <!--<input type="text" ng-model="main.name" placeholder="Name">-->
+            <input type="email" ng-model="global.loginUser.email" placeholder="Email">
+            <input type="password" ng-model="global.loginUser.password" placeholder="Password">
+            <button type="submit">Log In</button>
+            or <a ui-sref="newUser">Sign up</a>
+        </form>
+  </div>
+</div>
