@@ -40,25 +40,27 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-    <nav class="blue-grey lighten-5">
-        <div class="nav-wrapper">
-        <a ui-sref="home" class="brand-logo"><span class="cyan-text text-lighten-2" style="font-variant: small-caps">Comicbook Collection</span></a>
-        <!--<a href="#!" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>-->
-        <ul class="right hide-on-med-and-down"><span class="cyan-text text-lighten-2">
-            <!-- <li><a ui-sref="comics"><span class="cyan-text text-lighten-2">COMIC LIST</span></a></li> -->
-            <li ng-hide="!global.isAuthed()"><a ui-sref="users"><span class="cyan-text text-lighten-2">USERS</span></a></li>
-            <li ng-hide="!global.isAuthed()"><a ng-click="global.logout()"><span class="cyan-text text-lighten-2">LOG OUT</span></a></li>
-            <li ng-hide="global.isAuthed()"><a ui-sref="login"><span class="cyan-text text-lighten-2">LOG IN</span></a></li>
-            <li ng-hide="global.isAuthed()"><a ui-sref="newUser"><span class="cyan-text text-lighten-2">SIGN UP</span></a></li></span>
-        </ul>
-        <!--<ul class="side-nav" id="mobile-demo">
-            <li><a ui-sref="comics">Comics</a></li>
-            <li><a ui-sref="users">Users</a></li>
-            <li><a ui-sref="newUser">Sign Up</a></li>
-            <li><a ui-sref="login">Login</a></li>
-        </ul>-->
-        </div>
-    </nav>
+    <div class="navbar-fixed">
+      <nav class="blue-grey lighten-5">
+          <div class="nav-wrapper">
+          <a ui-sref="home" class="brand-logo"><span class="cyan-text text-lighten-2" style="font-variant: small-caps">Comicbook Collection</span></a>
+          <!--<a href="#!" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>-->
+          <ul class="right hide-on-med-and-down"><span class="cyan-text text-lighten-2">
+              <!-- <li><a ui-sref="comics"><span class="cyan-text text-lighten-2">COMIC LIST</span></a></li> -->
+              <li ng-hide="!global.isAuthed()"><a ui-sref="users"><span class="cyan-text text-lighten-2">USERS</span></a></li>
+              <li ng-hide="!global.isAuthed()"><a ng-click="global.logout()"><span class="cyan-text text-lighten-2">LOG OUT</span></a></li>
+              <li ng-hide="global.isAuthed()"><a ui-sref="login"><span class="cyan-text text-lighten-2">LOG IN</span></a></li>
+              <li ng-hide="global.isAuthed()"><a ui-sref="newUser"><span class="cyan-text text-lighten-2">SIGN UP</span></a></li></span>
+          </ul>
+          <!--<ul class="side-nav" id="mobile-demo">
+              <li><a ui-sref="comics">Comics</a></li>
+              <li><a ui-sref="users">Users</a></li>
+              <li><a ui-sref="newUser">Sign Up</a></li>
+              <li><a ui-sref="login">Login</a></li>
+          </ul>-->
+          </div>
+      </nav>
+    </div>
 
     <div ng-controller="MainController as main" class="container">
       <div ui-view></div>

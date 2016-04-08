@@ -75,7 +75,6 @@
                 if(res.data.token) {
                     auth.saveToken(res.data.token);
                 }
-
                 return res;
             },
         }
@@ -112,8 +111,6 @@
         self.logout = function() {
             $window.localStorage.removeItem('jwtToken');
         }
-
-
     }
 
     function userService($http, API, auth) {
@@ -123,7 +120,6 @@
         }
 
         // add authentication methods here
-
         self.login = function(email, password) {
             console.log("Trying to login")
             return $http.post('/api/authenticate', {
@@ -131,6 +127,5 @@
                 password: password
             })
         };
-
     }
 })()
