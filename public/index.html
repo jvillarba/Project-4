@@ -23,7 +23,10 @@
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
 
     <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Devonshire' rel='stylesheet' type='text/css'>
 
     <title>ComicBook App</title>
   </head>
@@ -31,7 +34,7 @@
     <script src="js/jquery-2.2.2.js"></script>
 
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
     <nav class="cyan accent-3">
         <div class="nav-wrapper">
         <a ui-sref="home" class="brand-logo">Comicbook Collection</a>
@@ -55,14 +58,6 @@
     <div ng-controller="MainController as main" class="container">
       <div ui-view></div>
     </div>
-
-    <footer ng-controller="ComicController as comics" class="page-footer cyan accent-3" style="bottom:0px;width:100%">
-        <div class="footer-copyright">
-            <div class="container">
-            <a class="grey-text text-lighten-4 right" href="http://marvel.com">{{ comics.copyright }}</a>
-            </div>
-        </div>
-    </footer>
 
   </body>
 </html>

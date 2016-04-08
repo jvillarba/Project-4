@@ -7,18 +7,15 @@
         <!--<p> ID: <span> {{ comic.id }} </span> | Available issues: <span> {{ comic.comics.available }} </span> </p>-->
     </li>
 </ul>
+<footer ng-controller="ComicController as comics" class="page-footer cyan accent-3" style="position:absolute;bottom:0;width:100%">
+    <div class="footer-copyright">
+        <div class="container">
+        <a class="grey-text text-lighten-4 right" href="http://marvel.com">{{ comics.copyright }}</a>
+        </div>
+    </div>
+</footer>
 
-<!--<script>
-  $(document).ready(function(){
-    $('.collapsible').collapsible({
-      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-    });
-  });
-</script>
-
-
-
-<ul class="pagination">
+<!--<ul class="pagination">
     <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
     <li class="active"><a href="#!">0</a></li>
     <li class="waves-effect"><a ui-sref="comics">A</a></li>

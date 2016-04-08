@@ -1,22 +1,30 @@
 <!-- <h2 class="cyan-text text-lighten-1"></h2> -->
 {{issue.oneComic.images}}
 
-<div class="row">
-  <div class="col s8 push-s4"><span class="flow-text"></span>
-    <ul class="collection">
-      <li ng-repeat="issue in issues.oneComic">
+<div class="row" ng-repeat="issue in issues.oneComic">
+  <!-- <div>
+    <img src="{{issue.images[0].path}}/portrait_xlarge.jpg" alt="">
+  </div> -->
+  <div class="col s10 push-s2">
+    <span class="flow-text"></span>
+    <ul class="collection" class="collection-item">
+      <li>
         <h5> {{ issue.title }} </h5>
-        <p> <strong> PRICE: $</strong> {{ issue.prices[0].price }} | <strong> DATE: </strong> {{ issue.dates[1].date }} </p>
+        <p> <strong> {{issue.prices[0].type}}</strong>: ${{ issue.prices[0].price }} | <strong>{{ issue.dates[0].type }}</strong> {{ issue.dates[0].date }} </p>
         <p> <strong> DESCRIPTION: </strong> {{ issue.description }} </p>
-        <!-- <img src="{{issue.images[0].path}}.jpg" alt=""> -->
-
       </li>
     </ul>
   </div>
-  <div class="col s4 pull-s8"  ng-repeat="issue in issues.oneComic">
+  <div class="col s2 pull-s10" >
     <span>
-      <!-- <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="" class="circle"> -->
-      <img src="{{issue.images[0].path}}.jpg" alt="">
+      <img src="{{issue.images[0].path}}/portrait_xlarge.jpg" alt="">
     </span>
   </div>
 </div>
+<footer ng-controller="ComicController as comics" class="page-footer cyan accent-3" style="bottom:0px;width:100%">
+    <div class="footer-copyright">
+        <div class="container">
+        <a class="grey-text text-lighten-4 right" href="http://marvel.com">{{ comics.copyright }}</a>
+        </div>
+    </div>
+</footer>
