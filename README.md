@@ -12,7 +12,7 @@
 ---
 #### User Stores:
 User | Action | Comments
---- | --- | --- 
+--- | --- | ---
 Reader | POST | As a reader I want to to what Marvel comic books are available
 Collector | CRUD | I need to log in as a user in order to see my collection
 Collector | CRUD | I want to easily be able to see what comics I have versus what I don't have and use cover artwork when purchasing future comic books
@@ -39,4 +39,4 @@ Collector | TBD | I want to see how much my collection is worth **future impleme
 ---
 #### Frameworks:
 - Here is a quick preview of the application
-!{Image]()
+!{Image](Proj4wireframe.jpg)
