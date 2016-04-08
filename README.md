@@ -1,4 +1,4 @@
-# jComic Books App
+# jComicbooks App
 ## WDI_SM_21 Project Four
 
 > *Website that easily compiles a collection of Marvel comic books*
@@ -39,4 +39,5 @@ Collector | TBD | I want to see how much my collection is worth **future impleme
 ---
 #### Frameworks:
 - Here is a quick preview of the application
+
 !{Image](Proj4wireframe.jpg)
