@@ -1,12 +1,18 @@
-<div ng-if="!detail.editing">
-    <h2>{{ detail.user.name }}</h2>
-    <h3>{{ detail.user.email }}</h3>
-    <button ng-click="detail.edit()">Edit</button>
-</div>
+<div style="height: 60px"></div>
+  <div class="container blue-grey lighten-5" style="border: 3px solid #4dd0e1;width: 50%;padding:10px">
+    <h3 style="text-shadow: 2px 2px 4px #000000">Profile</h3>
 
-<form ng-if="detail.editing" ng-submit="detail.update()">
-    <input ng-model="detail.editingUser.name" type="text" placeholder="Name">
-    <input ng-model="detail.editingUser.email" type="text" placeholder="Email">
-    <button type="submit">Edit</button>
-    <button ng-click="detail.editing=false">Cancel</button>
-</form>
+    <div ng-if="!detail.editing">
+        <h2>{{ detail.user.name }}</h2>
+        <h3>{{ detail.user.email }}</h3>
+        <button ng-click="detail.edit()">Edit</button>
+    </div>
+
+    <form ng-if="detail.editing" ng-submit="detail.update()">
+        <input ng-model="detail.editingUser.name" type="text" placeholder="Name">
+        <input ng-model="detail.editingUser.email" type="text" placeholder="Email">
+        <button type="submit">Edit</button>
+        <button ng-click="detail.editing=false">Cancel</button>
+        <!-- <button ng-click="main.destroy(user._id, $index)">Delete</button> -->
+  </form>
+</div>
