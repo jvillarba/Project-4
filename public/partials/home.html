@@ -1,66 +1,45 @@
+<style>
+  div {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative:absolute;
+  }
+
+  div::after {
+    content: "";
+    background: url("//i.ytimg.com/vi/EYtKuhsbEP8/maxresdefault.jpg");
+    opacity: .05;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+</style>
+
 <div class="container">
-    <!--<div class="background" style="position:fixed;top:-5%;left:-5%;width:110%;height:110%">
-        <img src="https://filmdump.files.wordpress.com/2011/05/x-men.jpg" style="opacity:.4;postion:fixed;top:0;left:0;right:0;bottom:0;margin:auto;min-width:100%;min-height:50%" alt="">
-    </div>-->
-</div>
-<div class="section white">
     <div class="row">
         <h2 class="header">My Comicbook Collection</h2>
-        <p class="grey-text text-darken-2 lighten-3">Lorem ipsum dolor sit amet, nibh sodales, turpis sit posuere ipsum placerat, maecenas erat diam, praesent justo et lorem, dolores iaculis penatibus. Adipiscing wisi ipsum tristique porttitor fusce, augue mattis, duis at molestie tempus orci nec porttitor. Sollicitudin quam aliquam lorem, nibh senectus commodo felis ut tincidunt.</p>
-        <div class="row nomargin promo">
-            <div ui-sref="comics" class="col s12 m4 l4">
-                <p><i class="mdi mdi-sort-alphabetical">
-                <h5>List of Comics</h5>
-                <p>Here is the list of <strong>Marvel</strong> comic books</p>
-            </div>
-            <div class="col s12 m4 l4" style="color: lightgray">
-                <p><i class="large material-icons">library_books</i></p>
-                <h5>Collection</h5>
-                <p>This will be a list of comics in my collection</p>
-            </div>
-            <div class="col s12 m4 l4">
-                <p><i class="large material-icons">notifications_paused</i></p>
-                <h5>Marvel Resources / Apps</h5>
-                <li href="http://marvel.com">Marvel.com</li>
-                <li href="http://marvel.com/mobile">Marvel Applications</li>
-            </div>
-        </div>
+        <p class="grey-text text-darken-2 lighten-3">Lorem ipsum dolor sit amet, nibh sodales, turpis sit posuere ipsum placerat, maecenas erat diam, praesent justo et lorem, dolores iaculis penatibus.</p>
     </div>
 </div>
-
-<!--
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('.parallax').parallax()
-        $(".button-collapse").sideNav()
-        $('.collapsible').collapsible()
-        $('.modal-trigger').leanModal()
-        })
-</script>
-
-<div class="parallax-container">
-    <div class="parallax" style="height:100><img src="http://i.annihil.us/u/prod/marvel//universe3zx/images/b/b0/XMEN200.jpg"></div>
-</div>
-<div class="section white">
-    <div class="row">
-        <h2 class="header">The Comicbook Collection</h2>
-        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-        <div class="row nomargin promo">
-            <div class="col s12 m4 l4">
-                <p><i class="large material-icons">sort_by_alpha</i>
-                <p>List of Comics</p>
-                <p>Here is the list of <strong>Marvel</strong> comic books</p>
-            </div>
-            <div class="col s12 m4 l4">
-                <p><i class="large material-icons">library_books</i></p>
-                <p>Collection</p>
-                <p>This will be a list of comics in my collection</p>
-            </div>
-            <div class="col s12 m4 l4">
-                <p><i class="large material-icons">notifications_paused</i></p>
-                <p>TBD</p>
-                <p>This is a placeholder</p>
-            </div>
-        </div>
+<div class="row nomargin">
+    <div ui-sref="comics" class="col s12 m4 l4">
+        <p><i class="large material-icons">sort_by_alpha</i></p>
+        <h5>List of Comics</h5>
+        <p>Here is the list of <strong>Marvel</strong> comic books</p>
     </div>
-</div>-->
+    <div class="col s12 m4 l4" style="color: gray">
+        <p><i class="large material-icons">library_books</i></p>
+        <h5>Collection</h5>
+        <p>This will be a list of comics in my collection</p>
+    </div>
+    <div class="col s12 m4 l4">
+        <p><i class="large material-icons">notifications_paused</i></p>
+        <h5>Marvel Resources / Apps</h5>
+        <li href="http://marvel.com">Marvel.com</li>
+        <li href="http://marvel.com/mobile">Marvel Applications</li>
+    </div>
+</div>

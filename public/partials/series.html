@@ -1,16 +1,15 @@
-<h2 class="cyan-text text-lighten-1">Marvel Comics list</h2>
+<h3>Marvel Comics list</h3>
 
 <ul class="collection">
-    <li ui-sref="comicpage({id: comic.id})" class="collection-item avatar collapsible-header blue-grey darken-1 white-text thin" ng-repeat="comic in comics.allComics">
+    <li ui-sref="comicpage({id: comic.id})" class="collection-item avatar collapsible-header blue-grey lighten-3 white-text thin" ng-repeat="comic in comics.allComics" style="min-height:initial">
         <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="" class="circle">
         <h5> <span> {{ comic.title }} </span> </h5>
-        <!--<p> ID: <span> {{ comic.id }} </span> | Available issues: <span> {{ comic.comics.available }} </span> </p>-->
     </li>
 </ul>
-<footer ng-controller="ComicController as comics" class="page-footer cyan accent-3" style="position:absolute;bottom:0;width:100%">
-    <div class="footer-copyright">
+<footer ng-controller="ComicController as comics">
+    <div class="footer-copyright" class="page-footer blue-grey lighten-5">
         <div class="container">
-        <a class="grey-text text-lighten-4 right" href="http://marvel.com">{{ comics.copyright }}</a>
+        <a class="blue-grey-text text-lighten-2 right" href="http://marvel.com">{{ comics.copyright }}</a>
         </div>
     </div>
 </footer>
